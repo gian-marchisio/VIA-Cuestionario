@@ -1,57 +1,55 @@
-// Función para calcular el resultado del cuestionario
+//NO TOCAR!!!!!!!!!
+
+document.getElementById('submit').addEventListener('click', calculateResult);
+
 function calculateResult() {
-    let score = 0;
-    let questions = document.querySelectorAll('.question');
-  
-    questions.forEach((question) => {
-      let radios = question.querySelectorAll('input[type="radio"]');
-      let selectedValue = null;
-  
-      radios.forEach((radio) => {
-        if (radio.checked) {
-          selectedValue = radio.value;
-        }
-      });
-  
-      if (selectedValue !== null) {
-        score += parseInt(selectedValue);
+  let score = 0;
+  let questions = document.querySelectorAll('.question');
+  let allQuestionsAnswered = true;
+
+  questions.forEach((question) => {
+    let radios = question.querySelectorAll('input[type="radio"]');
+    let selectedValue = null;
+
+    radios.forEach((radio) => {
+      if (radio.checked) {
+        selectedValue = radio.value;
       }
     });
-  
-    let result = document.getElementById('result');
-    result.innerHTML = `Tu resultado es: ${score} / 24 puntos, mientras mas puntos más de derecha eres`;
-  
-    // Mostrar el resultado solo si se han respondido todas las preguntas
-    if (score > -24 || score <= -15) {
-      alert("Te representa la izquierda");
-    } else if (score > -14 || score <= -5) {
-      alert("Te representa la centro izquierda");
-    } else if (score > -4 || score <= 4) {
-      alert("Te representa el centro");
-    } else if (score > 5 || score <= 14) {
-      alert("Te representa la centro derecha");
-    } else {
-      alert("Te representa la derecha");
-    }
 
+    if (selectedValue === null) {
+      allQuestionsAnswered = false;
+    } else {
+      score += parseInt(selectedValue);
+    }
+  });
+
+  if (!allQuestionsAnswered) {
+    alert("¡Error! Debe responder todas las preguntas antes de calcular el resultado.");
+    return;
   }
-  
-  // Función para resetear el cuestionario
-  function resetQuiz() {
-    let questions = document.querySelectorAll('.question');
-  
-    questions.forEach((question) => {
-      let radios = question.querySelectorAll('input[type="radio"]');
-  
-      radios.forEach((radio) => {
-        radio.checked = false;
-      });
-    });
-  
-    let result = document.getElementById('result');
-    result.style.display = 'none';
+
+  // Calcula el resultado y muestra la ventana emergente
+  let resultMessage = `Tu resultado es: ${score} / 54 puntos, mientras más puntos más de derecha eres`;
+
+  // Agrega las condiciones para mostrar el resultado según la puntuación
+  if (score <= 7) {
+    resultMessage += `\nTe representa la extrema izquierda`;
+  } else if (score <= 16) {
+    resultMessage += `\nTe representa la centro izquierda`;
+  } else if (score <= 24) {
+    resultMessage += `\nTe representa el centro`;
+  } else if (score <= 33) {
+    resultMessage += `\nTe representa la centro derecha`;
+  } else if (score <= 42) {
+    resultMessage += `\nTe representa la derecha`;
+  } else {
+    resultMessage += `\nTe representa la extrema derecha`;
   }
-  
-  // Agregar eventos a los botones de submit y reset
-  document.getElementById('submit').addEventListener('click', calculateResult);
-  document.getElementById('reset').addEventListener('click', resetQuiz);
+
+  alert(resultMessage);
+  //Redireccion a pagina resume.html
+  setTimeout(function() {
+    window.location.href = 'resume.html';
+  }, 0);
+}
