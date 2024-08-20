@@ -1,5 +1,3 @@
-/*LAST UPDATE: Boton de enviar mas grande y agregado de fieldset y legend a todas las preguntas*/
-
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
@@ -100,3 +98,9 @@ body {
     text-align: right;
   }
   
+  .img-right {
+    float: right;
+    margin-left: 10px;
+    height: 200px;
+    width: 200px;
+  }
