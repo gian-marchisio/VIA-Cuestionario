@@ -6,11 +6,37 @@ body {
   
   .question {
     margin-bottom: 20px;
+    font-size: 1.3em;
+    padding: 10px;
+  }
+
+  fieldset {
+    border-radius: 7px;
+    margin: 20px;
+    padding: 20px;
   }
   
-  .question p {
+  .results {
+    color: #000;
+}
+
+  .menu {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #fff; /* opcional, pero recomendado para que el menú tenga un fondo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* opcional, pero recomendado para dar un efecto de sombra */
+  }
+
+  .question fieldset {
     font-weight: bold;
     margin-bottom: 10px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2em;
   }
   
   ul {
@@ -33,8 +59,8 @@ body {
   
   /* Estilos para los botones de submit y reset */
   button[type="submit"] {
-    background-color: #4CAF50;
-    color: #fff;
+    background-color: #fff;
+    color: #2f8;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -42,18 +68,11 @@ body {
   }
   
   button[type="reset"] {
-    background-color: #ccc;
-    color: #333;
+    background-color: #fff;
+    color: #f37;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
   
-  button[type="submit"]:hover {
-    background-color: #3e8e41;
-  }
-  
-  button[type="reset"]:hover {
-    background-color: #bbb;
-  }
