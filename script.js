@@ -48,6 +48,11 @@ function calculateResult() {
   }
 
   alert(resultMessage);
+
+  setTimeout(function() {
+    window.location.href = 'resume.html';
+  }, 0);
+}
   //Redireccion a pagina resume.html
   setTimeout(function() {
     window.location.href = 'resume.html';
