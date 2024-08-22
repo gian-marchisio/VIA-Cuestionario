@@ -2,6 +2,8 @@
 
 document.getElementById('submit').addEventListener('click', calculateResult);
 
+//Funcion para calcular el resultado
+
 function calculateResult() {
   let score = 0;
   let questions = document.querySelectorAll('.question');
@@ -36,9 +38,9 @@ function calculateResult() {
   if (score <= 7) {
     resultMessage += `\nTe representa la extrema izquierda`;
   } else if (score <= 16) {
-    resultMessage += `\nTe representa la centro izquierda`;
+    resultMessage += `\nTe representa la izquierda`;
   } else if (score <= 24) {
-    resultMessage += `\nTe representa el centro`;
+    resultMessage += `\nTe representa el centro izquierda`;
   } else if (score <= 33) {
     resultMessage += `\nTe representa la centro derecha`;
   } else if (score <= 42) {
@@ -47,13 +49,10 @@ function calculateResult() {
     resultMessage += `\nTe representa la extrema derecha`;
   }
 
+  //Mostrar alerta con el resultado y enviar a otra pagina cuando interactuen con el boton de aceptar
+
   alert(resultMessage);
 
-  setTimeout(function() {
-    window.location.href = 'resume.html';
-  }, 0);
-}
-  //Redireccion a pagina resume.html
   setTimeout(function() {
     window.location.href = 'resume.html';
   }, 0);
