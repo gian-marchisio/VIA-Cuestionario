@@ -1,7 +1,6 @@
 //NO TOCAR!!!!!!!!!
 
 document.getElementById('submit').addEventListener('click', calculateResult);
-
 //Funcion para calcular el resultado
 
 function calculateResult() {
