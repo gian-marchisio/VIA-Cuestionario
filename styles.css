@@ -2,6 +2,12 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    user-select: none;
+  }
+
+  /* Cambiar el cursor a default (flecha) */
+  p, h1, h2, h3, h4, h5, h6, span, div {
+    cursor: default;
   }
   
   .question {
@@ -101,7 +107,10 @@ body {
   
   button {
     border-radius: 5px;
+    cursor: pointer;
   }
+
+  /*Estilos para agregar imagen a la derecha de las respuestas del formulario */
 
   .img-right {
     float: right;
