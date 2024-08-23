@@ -1,0 +1,16 @@
+h2 {
+    font-size: 44px;
+    font-weight: bold;
+    text-align: center;
+}
+
+fieldset {
+    margin: 10px;
+    border-radius: 10px;
+}
+
+h3 {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
