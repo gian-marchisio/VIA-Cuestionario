@@ -33,5 +33,16 @@ button {
     width: 200px;
     height: 20px;
     margin-left: 525px;
+    cursor: pointer;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    user-select: none;
+  }
+
+  /* Cambiar el cursor a default (flecha) */
+  p, h1, h2, h3, h4, h5, h6, span, div {
+    cursor: default;
+  }
