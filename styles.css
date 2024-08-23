@@ -85,24 +85,26 @@ body {
   
   /* Estilos para los botones de submit y reset */
   button[type="submit"] {
-    background-color: #000;
-    color: #2f85;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 20px;
-    height: 5px;
+  background-color: #26f; /* f72 */
+  color: #fff;
+  border-radius: 10px;
+  margin: 10px;
+  border: #000;
+  width: 230px;
+  height: 40px;
+  margin-left: 490px;
+  cursor: pointer;
   }
   
   button[type="reset"] {
-    background-color: #fff;
-    color: #f37;
-    padding: 10px 20px;
+    background-color: #f72; /* 26f */
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     text-align: right;
+    width: 150px;
+    height: 20px;
   }
   
   button {
