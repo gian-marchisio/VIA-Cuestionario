@@ -82,6 +82,12 @@ body {
     margin-left: 30px;
     border-radius: 5px;
   }
+
+  h6 {
+    font-weight: 300;
+    font-size: 17px;
+    margin-left: 90px;
+  }
   
   /* Estilos para los botones de submit y reset */
   button[type="submit"] {
