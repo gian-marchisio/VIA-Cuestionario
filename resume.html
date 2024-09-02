@@ -6,6 +6,21 @@
     <link rel="stylesheet" href="resume.css">
     <link rel="shortcut icon" href="ETRR01.png" type="image/x-icon">
     <title>Resumen de Textos</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Leer la puntuación y el mensaje de localStorage
+            let resultMessage = localStorage.getItem('resultMessage');
+            if (!resultMessage) {
+                resultMessage = "No se ha calculado el resultado.";
+            }
+    
+            // Reemplazar cualquier salto de línea o texto crudo con etiquetas HTML para saltos de línea
+            resultMessage = resultMessage.replace(/\n/g, '<br>');
+    
+            // Mostrar el resultado en la página
+            document.getElementById('resultado').innerHTML = resultMessage;
+        });
+    </script>
 </head>
 <body>
 
@@ -33,10 +48,23 @@
         <div>
             <h2>Resultados:</h1>
         </div>
+
+    </div>
+    <div class="resultado-caja">
+        <div id="resultado">
+            <!-- El resultado se mostrará aquí -->
+        </div>
+    </div>
+
+    <div>
+        <img class="Posicion" src="Posicion.png">
+        <img class="Posicion posisisi" src="Posicion2.png">
+    </div>
+
         <!-- Resumen 1 -->
         <div>
-            <fieldset>
-            <h6>00-07</h6>
+            <fieldset class="fieldset-0">
+            <h6></h6>
             <h5>Te representa la extrema izquierda</h5>
             <p>Crees que el capitalismo es injusto y debe ser eliminado. pensas que todos los bienes y recursos deben ser compartidos por igual entre todos, sin propiedad privada. Quieres una sociedad donde no haya clases sociales, y todos sean verdaderamente iguales.</p>
             </fieldset>
@@ -44,8 +72,8 @@
 
         <!-- Resumen 2 -->
         <div>
-            <fieldset>
-            <h6>08-16</h6>
+            <fieldset class="fieldset-1">
+            <h6></h6>
             <h5>Te representa la izquierda</h5>
             <p>Crees que el gobierno debe ayudar a que todos tengan lo necesario para vivir bien, como educación y salud gratuitas. Aunque no estas en contra del capitalismo, queres que este sea más justo y que la riqueza se distribuya mejor, para que no haya tanta desigualdad.</p>
         </fieldset>
@@ -53,8 +81,8 @@
 
         <!-- Resumen 3 -->
         <div>
-            <fieldset>
-            <h6>17-24</h6>
+            <fieldset class="fieldset-2">
+            <h6></h6>
             <h5>Te representa el centro izquierda</h5>
             <p>Pensas que el capitalismo puede funcionar bien si se regula correctamente. Quieres que el gobierno intervenga cuando sea necesario para asegurar que todos tengan las mismas oportunidades y que nadie quede atrás, pero sin cambiar completamente el sistema.</p>
         </fieldset>
@@ -62,8 +90,8 @@
 
         <!-- Resumen 4 -->
         <div>
-            <fieldset>
-            <h6>25-33</h6>
+            <fieldset class="fieldset-3">
+            <h6></h6>
             <h5>Te representa la centro derecha</h5>
             <p>Crees que el mercado libre y la libertad individual son importantes para el progreso. Prefieres que el gobierno no intervenga demasiado, pero aceptas que algunas regulaciones son necesarias para mantener el orden y proteger las tradiciones.</p>
         </fieldset>
@@ -71,8 +99,8 @@
 
         <!-- Resumen 5 -->
         <div>
-            <fieldset>
-            <h6>34-42</h6>
+            <fieldset class="fieldset-4">
+            <h6></h6>
             <h5>Te representa la derecha</h5>
             <p>Valoras mucho las tradiciones y la identidad cultural. Quieres un gobierno que proteja estos valores y que mantenga el orden en la sociedad. Prefieres un mercado libre, pero crees que deben haber algunas reglas para proteger los intereses del país.</p>
         </fieldset>
@@ -80,13 +108,44 @@
 
         <!-- Resumen 6 -->
         <div>
-            <fieldset>
-            <h6>43-48</h6>
+            <fieldset class="fieldset-5">
+            <h6></h6>
             <h5>Te representa la extrema derecha</h5>
             <p>Crees que el país necesita un gobierno fuerte que proteja la cultura y la seguridad a toda costa. Estas a favor de políticas que prioricen a su nación por encima de todo y crees que, si es necesario, se pueden limitar algunas libertades para mantener el orden y la seguridad.</p>
         </fieldset>
         </div>
     </div>
+
+        <!-- Resumen 7 -->
+        <div>
+            <fieldset class="fieldset-6">
+            <h6></h6>
+            <h5>Te representa el liberalismo</h5>
+            <p>La libertad individual es tu valor más importante. Crees que el gobierno debería intervenir lo menos posible en la vida de las personas, dejando que cada uno tome sus propias decisiones. Para ti, lo ideal es un gobierno que garantice los derechos y libertades fundamentales, pero que no interfiera en la economía o en la vida privada. Seguramente valoras el mercado libre y la autonomía personal, y piensas que cualquier forma de control gubernamental debería ser mínima, siempre que no se dañen los derechos de los demás.</p>
+        </fieldset>
+        </div>
+    </div>
+    
+        <!-- Resumen 8 -->
+        <div>
+            <fieldset class="fieldset-7">
+            <h6></h6>
+            <h5>Te representa el centro</h5>
+            <p>Valoras la moderación y el equilibrio. Crees que ni el gobierno debe tener demasiado poder ni la libertad individual debe ser completamente ilimitada. Para ti, es importante encontrar un punto medio, donde el gobierno proteja los derechos de las personas, pero también mantenga el orden y la estabilidad. Prefieres soluciones prácticas y moderadas que no se inclinen hacia los extremos, y valoras el diálogo y el compromiso para resolver problemas. Tu enfoque es buscar el mejor camino que beneficie a la mayoría, sin caer en ideologías rígidas.</p>
+        </fieldset>
+        </div>
+    </div>
+
+        <!-- Resumen 9 -->
+        <div>
+            <fieldset class="fieldset-8">
+            <h6></h6>
+            <h5>Te representa el totalitarismo</h5>
+            <p>Probablemente crees que la sociedad necesita un gobierno fuerte y centralizado que controle muchos aspectos de la vida. Para ti, la estabilidad y la seguridad son fundamentales, y piensas que es mejor que el Estado tenga el poder absoluto o casi absoluto para mantener el orden. Seguramente ves la libertad individual como algo que puede ser peligroso si no se regula, ya que podría desestabilizar a la sociedad. Para ti, es preferible sacrificar algunas libertades personales en favor del bienestar colectivo y la unidad.</p>
+        </fieldset>
+        </div>
+    </div>
+
     <!-- Botón que redirige a index.html -->
     <a href="index.html">
         <button type="button">Volver a la página principal</button>
