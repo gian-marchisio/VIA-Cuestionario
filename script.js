@@ -66,5 +66,5 @@ function calculateResult() {
   localStorage.setItem('resultMessage', resultMessage);
 
   // Redirige a la página de resultados
-  window.location.href = 'resume.html';
+  window.location.href = 'https://htmlpreview.github.io/?https://raw.githubusercontent.com/gian-marchisio/VIA-Cuestionario/main/index.html';
 }
