@@ -15,8 +15,8 @@ function calculateResult() {
       
       if (selectedRadio) {
           // Si hay un radio seleccionado, obtenemos los valores
-          let selectedValue1 = selectedRadio.getAttribute('data-value1');
-          let selectedValue2 = selectedRadio.getAttribute('data-value2');
+          let selectedValue1 = selectedRadio.getAttribute('data-value1') - 12 * 6;
+          let selectedValue2 = selectedRadio.getAttribute('data-value2') - 8 * 6;
 
           // Convierte los valores a números (0 si no se pueden convertir)
           score1 += parseInt(selectedValue1) || 0;
@@ -40,24 +40,28 @@ function calculateResult() {
   let resultMessage = 'Tus resultados:<br>';
 
   // Agrega las condiciones para mostrar el resultado según la puntuación
-  if (score1 <= 7) {
+  if (score1 <= -48) {
       resultMessage += '<br>Te representa la extrema izquierda.<br>';
-  } else if (score1 <= 16) {
+  } else if (score1 <= -32) {
       resultMessage += '<br>Te representa la izquierda.<br>';
-  } else if (score1 <= 24) {
+  } else if (score1 <= -16) {
       resultMessage += '<br>Te representa el centro izquierda.<br>';
-  } else if (score1 <= 33) {
-      resultMessage += '<br>Te representa el centro derecha.<br>';
-  } else if (score1 <= 42) {
-      resultMessage += '<br>Te representa la derecha.<br>';
-  } else {
+  } else if (score1 <= 0) {
+      resultMessage += '<br>Te representa el centro<br>'
+  } else if (score1 >= 33) {
       resultMessage += '<br>Te representa la extrema derecha.<br>';
+  } else if (score1 >= 17) {
+      resultMessage += '<br>Te representa la derecha.<br>';
+  } else if (score1 >= 1) {
+      resultMessage += '<br>Te representa el centro derecha.<br>';
+  } else {
+      resultMessage += '<br>Error<br>';
   }
 
-  if (score2 <= 10) {
+  if (score2 <= -16) {
       resultMessage += '<br>En el diagrama de Nolan te representa el totalitarismo.<br>';
-  } else if (score2 <= 21) {
-      resultMessage += '<br>En el diagrama de Nolan te representa el centro.<br>';
+  } else if (score2 >= 16) {
+      resultMessage += '<br>En el diagrama de Nolan te representa el liberalismo.<br>';
   } else {
       resultMessage += '<br>En el diagrama de Nolan te representa el liberalismo.<br>';
   }
@@ -66,5 +70,5 @@ function calculateResult() {
   localStorage.setItem('resultMessage', resultMessage);
 
   // Redirige a la página de resultados
-  window.location.href = 'https://htmlpreview.github.io/?https://raw.githubusercontent.com/gian-marchisio/VIA-Cuestionario/main/resume.html';
+  window.location.href = 'resume.html';
 }
