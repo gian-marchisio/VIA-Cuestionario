@@ -16,6 +16,10 @@ body {
     padding: 10px;
   }
 
+  .ancho {
+    width: 55px;
+  }
+
   h2 {
     text-align: left;
     font-size: 15px;
@@ -130,4 +134,11 @@ body {
     margin-left: 10px;
     height: 180px;
     width: 180px;
+  }
+
+  .img-right-ancho {
+    float: right;
+    margin-left: 10px;
+    height: 180px;
+    width: 210px;
   }
